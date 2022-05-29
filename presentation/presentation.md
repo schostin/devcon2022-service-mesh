@@ -6,7 +6,7 @@ slidenumbers: true
 
 ---
 
-Disclaimer: Die Folien sind in circa 30 Minuten Arbeit entstanden. Fragt gerne jederzeit wenn Ihr Fragen habt oder etwas unklar ist / fehlt. Denglisch ftw.
+Disclaimer: Die Folien sind in circa 60 Minuten Arbeit entstanden. Fragt gerne jederzeit wenn Ihr Fragen habt oder etwas unklar ist / fehlt. Denglisch ftw.
 
 ---
 
@@ -33,7 +33,7 @@ Wie sieht so eine ganz grundlegende Architektur aus?
 
 ---
 
-Todo: Insert Architekturbild
+![inline](./images/Default-Architecture.png)
 
 ---
 
@@ -205,11 +205,11 @@ Alternativen: Linkerd, Consul Connect, Kuma, AWS App Mesh
 
 ---
 
-## Fragen?
-
----
-
 Danke für Eure Aufmerksamkeit
 
 [https://www.linkedin.com/in/sebastian-neb/](https://www.linkedin.com/in/sebastian-neb/)
 [https://github.com/schostin](https://github.com/schostin)
+
+---
+
+![inline](./images/SenacorWerbung.png)
