@@ -115,6 +115,22 @@ Solution: We use a service mesh and get everything for free?
 
 ---
 
+### Service Mesh "Providers"
+
+- Istio
+- LinkerD
+- Consul Connect
+- AWS App Mesh
+- Google Anthos Service Mesh
+
+---
+
+Focus on the "main player"
+
+*Istio*
+
+---
+
 Pre-requisites for this talk and all following information: We are in a *Kubernetes cluster*
 
 ^ Service Meshes can also span across clusters or can be hosted completely seperate from clusters, but I'll focus on Kubernetes here.
@@ -166,22 +182,6 @@ What did we gain?
 ---
 
 Looks easy, it just workz?
-
----
-
-### Service Mesh "Providers"
-
-- Istio
-- LinkerD
-- Consul Connect
-- AWS App Mesh
-- Google Anthos Service Mesh
-
----
-
-Focus on the "main player"
-
-*Istio*
 
 ---
 
@@ -250,82 +250,9 @@ Thanks <3
 
 ---
 
-## Projektüberblick & Architektur
-
---
-
-Wie sieht so eine ganz grundlegende Architektur aus?
-
----
-
-![inline](./images/Default-Architecture.png)
-
----
-
-![inline](./images/SimpleExample.png)
-
----
-
-## Warum Service Mesh?
-
----
-
-Warum Service Mesh?
-
-Was sind grundsätzliche Anforderungen des Kunden?
-
----
-
-- Verschlüsselung überall (at rest, in flight) --> HTTPS minimum
-- Authentifizierung des Nutzers (JWT-basiert)
-- Network controls
-- Compliance Anforderungen (Tracing / Audit / Acccess Logs)
-- Technische Anforderung: API-Gateway
-
-## The Good
-
----
-
 Ein Service Mesh kapselt meist all diese Anforderungen mit mehr Kontrolle und "Einfacher"
 
 Anstatt 6 Tools zu warten und genehmigt zu bekommen --> meistens nur 1 tool notwending (bspw. Istio)
-
----
-
-![inline](./images/istio-marketing.png)
-
-Was nutzen wir wirklich?
-
----
-
-![inline](./images/SimpleExample.png)
-
----
-<!-- ![fit](./images/SimpleExample.png) -->
-
-- Certificate Management
-- Traffic Management
-- mTLS Verschlüsselung
-- JWT Validation
-- API Gateway / Routing information
-- Circuit Breaking / Load Balancing configuration / Timeouts
-- (HTTP-) Metriken
-
-^ Darf ich den service aufrufen? Darf der service mich aufrufen?
-
----
-
-Was nutzen wir darüber hinaus?
-
----
-
-- Header extraction
-- Tracing
-- Entitlement-checks (custom Filter)
-
----
-
-Was sind sonstige Vorteile?
 
 ---
 
@@ -337,13 +264,7 @@ Was sind sonstige Vorteile?
 
 ---
 
-## The Bad
-
----
-
 Was sind die größten Nachteile?
-
----
 
 - Komplexität beim Debugging im Cluster
 - Jegliche Service Meshs sind schwer zu verstehen
@@ -357,40 +278,3 @@ Was sind die größten Nachteile?
 ---
 
 Entwicklersicht: Installation / Update / Configuration ist die Hölle (zumindest mit Istio)
-
----
-
-## Istio
-
----
-
-- Konnte alle Anforderungen abdecken mit einem Tool
-- Marketing Folien sagen es funktioniert einfach
-- Google Driven
-
----
-
-Es gab nie eine Evaluation, es wurde sich einfach direkt dafür entschieden
-
-Alternativen: Linkerd, Consul Connect, Kuma, AWS App Mesh
-
----
-
-## Wrap-Up
-
----
-
-- Service Meshes bieten große Vorteile, speziell wenn man service-to-service Kommunikation hat.
-- Resourcenverbrauch in unserem Umfeld vernachlässigbar (wenn man schon einen SpringBoot Microservice hat, macht ein zusätzlicher envoy keinen Unterschied)
-- Es muss bitte nicht immer Istio sein, leichtgewichtiger geht auch
-
----
-
-Danke für Eure Aufmerksamkeit
-
-[https://www.linkedin.com/in/sebastian-neb/](https://www.linkedin.com/in/sebastian-neb/)
-[https://github.com/schostin](https://github.com/schostin)
-
----
-
-![inline](./images/SenacorWerbung.png)
