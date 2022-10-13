@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: echoserver
+  namespace: echoserver
+spec:
+  hosts:
+  - "istio-demo.sebastianneb.de"
+  gateways:
+  - istio-ingress/istio-demo-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /test
+    fault:
+      abort:
+        percentage:
+          value: 50
+        httpStatus: 500
+    route:
+    - destination:
+        host: echoserver.echoserver.svc.cluster.local
+        port:
+          number: 8080

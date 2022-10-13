@@ -1,0 +1,9 @@
+# revision: 1-15-2
+meshConfig:
+  accessLogFile: "/dev/stdout"
+  accessLogEncoding: "JSON"
+  enableTracing: true
+  outboundTrafficPolicy:
+    mode: "REGISTRY_ONLY"
+global:
+  logAsJson: true

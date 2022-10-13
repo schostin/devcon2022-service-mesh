@@ -1,0 +1,28 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: istio-demo-gateway
+  namespace: istio-ingress
+spec:
+  selector:
+    istio: main-ingress
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      tls:
+        # Enable for https redirect
+        httpsRedirect: false
+      hosts:
+        - "istio-demo.sebastianneb.de"
+    # Enable for actual HTTPS
+    # - port:
+    #     number: 443
+    #     name: https
+    #     protocol: HTTPS
+    #   tls:
+    #     mode: SIMPLE
+    #     credentialName: api-tls # pragma: allowlist secret
+    #   hosts:
+    #     - "istio-demo.sebastianneb.de"

@@ -1,0 +1,5 @@
+apiVersion: v2
+name: istio-custom-config
+description: istio custom config for schostin
+type: application
+version: 0.1.0
