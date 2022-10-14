@@ -12,7 +12,7 @@ autoscale: true
 ---
 
 > A service mesh is a dedicated infrastructure layer that you can add to your applications
--- Istio
+-- Ist.io
 
 ---
 
