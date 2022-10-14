@@ -79,7 +79,7 @@ There are seperate tool for every of these mentioned requirements
 #### End User Authentication
 
 - oathkeeper
-- Langauage specific checks (e.g. SpringBoot Security)
+- Language specific checks (e.g. SpringBoot Security)
 - Integrated in Api-Gw
 - ...
 
